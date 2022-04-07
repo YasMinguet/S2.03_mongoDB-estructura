@@ -1,0 +1,123 @@
+> db.clientes.find().pretty()
+{
+        "_id" : ObjectId("624f366a5ef05d18eecd8eb8"),
+        "nombre" : "",
+        "apellidos" : "",
+        "direcciones" : {
+                "direccion" : "",
+                "codigo postal" : "",
+                "localidad" : ObjectId("624f36a15ef05d18eecd8eba"),
+                "provincia" : ObjectId("624f36be5ef05d18eecd8ebb")
+        },
+        "pedidos" : [
+                ObjectId("624f37025ef05d18eecd8ebc")
+        ]
+}
+> db.localidades.find().pretty()
+{ "_id" : ObjectId("624f36a15ef05d18eecd8eba"), "nombre" : "" }
+> db.provincias.find().pretty()
+{ "_id" : ObjectId("624f36be5ef05d18eecd8ebb"), "nombre" : "" }
+> db.pedidos.find().pretty()
+{
+        "_id" : ObjectId("624f37025ef05d18eecd8ebc"),
+        "registro_pedido" : Timestamp(0, 0),
+        "recogida_local" : true,
+        "envio_domicilio" : false,
+        "precio_total" : 0,
+        "productos" : [
+                ObjectId("624f37f65ef05d18eecd8ec0")
+        ],
+        "detalle_envio_domicilio" : {
+                "repartidor" : "624f40fd7c9c013b6296a772",
+                "registro" : Timestamp(0, 0)
+        }
+}
+> db.productos.find().pretty()
+{
+        "_id" : ObjectId("624f37f65ef05d18eecd8ec0"),
+        "tipo" : "pizza",
+        "detalles_producto" : {
+                "nombre" : "",
+                "descripcion" : "",
+                "imagen" : {
+                        "code" : "",
+                        "scope" : {
+
+                        }
+                },
+                "precio" : 0
+        }
+}
+{
+        "_id" : ObjectId("624f3b757c9c013b6296a741"),
+        "tipo" : "bebida",
+        "detalles_producto" : {
+                "nombre" : "",
+                "descripcion" : "",
+                "imagen" : {
+                        "code" : "",
+                        "scope" : {
+
+                        }
+                },
+                "precio" : 0
+        }
+}
+{
+        "_id" : ObjectId("624f4e547c9c013b6296a7a7"),
+        "tipo" : "hamburguesa",
+        "detalles_producto" : {
+                "nombre" : "",
+                "descripcion" : "",
+                "imagen" : {
+                        "code" : "",
+                        "scope" : {
+
+                        }
+                },
+                "precio" : 0
+        }
+}
+> db.categoria_pizza.find().pretty()
+{
+        "_id" : ObjectId("624f38205ef05d18eecd8ec1"),
+        "nombre" : "",
+        "pizzas" : [
+                ObjectId("624f37f65ef05d18eecd8ec0")
+        ]
+}
+> db.empleados.find().pretty()
+{
+        "_id" : ObjectId("624f37395ef05d18eecd8ebe"),
+        "nombre" : "",
+        "apellidos" : "",
+        "NIF" : "",
+        "cocinero" : true,
+        "repartidor" : false
+}
+{
+        "_id" : ObjectId("624f40fd7c9c013b6296a772"),
+        "nombre" : "",
+        "apellidos" : "",
+        "NIF" : "",
+        "cocinero" : false,
+        "repartidor" : true
+}
+> db.tienda.find().pretty()
+{
+        "_id" : ObjectId("624f370e5ef05d18eecd8ebd"),
+        "direcciones" : {
+                "direccion" : "",
+                "codigo postal" : "",
+                "localidad" : ObjectId("624f36a15ef05d18eecd8eba"),
+                "provincia" : ObjectId("624f36be5ef05d18eecd8ebb")
+        },
+        "pedidos" : [
+                ObjectId("624f37025ef05d18eecd8ebc")
+        ],
+        "empleados" : [
+                ObjectId("624f37395ef05d18eecd8ebe"),
+                ObjectId("624f40fd7c9c013b6296a772")
+        ]
+}
+>
