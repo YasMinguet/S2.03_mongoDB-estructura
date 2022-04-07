@@ -1,0 +1,78 @@
+> db.clientes.find().pretty()
+{
+        "_id" : ObjectId("624ec0247c9c013b6296a6ed"),
+        "nombre" : "",
+        "apellidos" : "",
+        "fecha_registro" : Timestamp(220, 1788394880),
+        "telefono" : "",
+        "direccion" : {
+                "calle" : "",
+                "numero" : "",
+                "piso" : "",
+                "puerta" : "",
+                "ciudad" : "",
+                "codigo_postal" : "",
+                "pais" : ""
+        },
+        "email" : "",
+        "cliente_recomendado_id" : null
+}
+{
+        "_id" : ObjectId("624ece327c9c013b6296a721"),
+        "nombre" : "",
+        "apellidos" : "",
+        "fecha_registro" : Timestamp(220, 1788394880),
+        "telefono" : "",
+        "direccion" : {
+                "calle" : "",
+                "numero" : "",
+                "piso" : "",
+                "puerta" : "",
+                "ciudad" : "",
+                "codigo_postal" : "",
+                "pais" : ""
+        },
+        "email" : "",
+        "cliente_recomendado_id" : "624ec0247c9c013b6296a6ed"
+}
+> db.empleados.find().pretty()
+{
+        "_id" : ObjectId("624df1885ef05d18eecd8eb5"),
+        "nombre" : "",
+        "apellidos" : ""
+}
+> db.facturas.find().pretty()
+{
+        "_id" : ObjectId("624ecb3a7c9c013b6296a71a"),
+        "cliente" : ObjectId("624ec0247c9c013b6296a6ed"),
+        "empleado" : ObjectId("624df1885ef05d18eecd8eb5"),
+        "gafas_vendidas" : [
+                ObjectId("624df1155ef05d18eecd8eb4")
+        ]
+}
+> db.gafas.find().pretty()
+{
+        "_id" : ObjectId("624df1155ef05d18eecd8eb4"),
+        "marca" : "",
+        "graduacion_dch" : "",
+        "graduacion_izq" : "",
+        "tipo_montura" : "",
+        "proveedor" : ObjectId("624df0805ef05d18eecd8eb3")
+}
+> db.proveedor.find().pretty()
+{
+        "_id" : ObjectId("624df0805ef05d18eecd8eb3"),
+        "nombre" : "",
+        "nif" : "",
+        "telefono" : "",
+        "fax" : "",
+        "direccion" : {
+                "calle" : "",
+                "numero" : "",
+                "piso" : "",
+                "puerta" : "",
+                "ciudad" : "",
+                "codigo_postal" : "",
+                "pais" : ""
+        }
+}
